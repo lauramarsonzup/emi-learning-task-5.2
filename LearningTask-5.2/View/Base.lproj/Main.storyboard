@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Relatorio De Despesas View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LearningTask_5_2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RelatorioDeDespesasViewController" customModule="LearningTask_5_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bd2-5A-GSF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="toW-lW-9em" userLabel="Stack View Principal">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8Va-LS-ubC" userLabel="Cabecalho Stack View">
                                         <rect key="frame" x="24" y="0.0" width="366" height="42"/>
@@ -43,12 +43,119 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cZY-64-ZQd">
-                                        <rect key="frame" x="24" y="66" width="366" height="656"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="dhs-zL-Ejn" userLabel="Nova Entrada Stack View">
+                                        <rect key="frame" x="24" y="66" width="366" height="180"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nova entrada" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ouX-pV-meU" userLabel="Nova Entrada Label">
+                                                <rect key="frame" x="0.0" y="0.0" width="366" height="21.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="7hj-h2-a5R" userLabel="Stack View Titulo">
+                                                <rect key="frame" x="0.0" y="33.5" width="366" height="17"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4TI-Nx-DaO" userLabel="Label Titulo">
+                                                        <rect key="frame" x="0.0" y="0.0" width="40.5" height="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Título curto para o item" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pmx-Kg-u4u" userLabel="Text Field Titulo">
+                                                        <rect key="frame" x="52.5" y="0.0" width="313.5" height="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="UnS-Vg-3ch" userLabel="Stack View Tipo">
+                                                <rect key="frame" x="0.0" y="62.5" width="366" height="31.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tipo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o70-du-JyN" userLabel="Label Tipo">
+                                                        <rect key="frame" x="0.0" y="0.0" width="40.5" height="31.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1: Eletrônicos - 2: Escritório" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xxs-7C-HkB" userLabel="Text Field Tipo">
+                                                        <rect key="frame" x="52.5" y="0.0" width="313.5" height="31.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="mlb-11-RNf" userLabel="Stack View Valor">
+                                                <rect key="frame" x="0.0" y="106" width="366" height="34"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valor:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nos-fQ-WhI" userLabel="Label Valor">
+                                                        <rect key="frame" x="0.0" y="0.0" width="40.5" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="R$ 100,00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FUd-zU-nTo" userLabel="Text Field Valor">
+                                                        <rect key="frame" x="52.5" y="0.0" width="313.5" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="NcB-s0-cTc" userLabel="Stack View Submit">
+                                                <rect key="frame" x="0.0" y="152" width="366" height="28"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iOH-pZ-QAc" userLabel="Botao Adicionar">
+                                                        <rect key="frame" x="268" y="0.0" width="98" height="28"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" image="plus" catalog="system" imagePlacement="trailing" title="Adicionar" imagePadding="4" cornerStyle="capsule" buttonSize="small">
+                                                            <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
+                                                            <color key="baseBackgroundColor" name="Downriver"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="botaoAdicionarDespesaPressionado:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G60-92-ovt"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="FUd-zU-nTo" firstAttribute="width" secondItem="pmx-Kg-u4u" secondAttribute="width" id="P9Z-8q-cfu"/>
+                                            <constraint firstItem="xxs-7C-HkB" firstAttribute="width" secondItem="pmx-Kg-u4u" secondAttribute="width" id="YuE-Ze-LJl"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="tIE-Oi-2jZ" userLabel="Despesas Stack View">
+                                        <rect key="frame" x="24" y="270" width="366" height="448"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Relatório Parcial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NjJ-dP-3du" userLabel="Relatorio Label">
+                                                <rect key="frame" x="0.0" y="0.0" width="366" height="21.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" verticalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="Dpq-4C-7Bm" userLabel="Lista de Despesas View" customClass="ListaDeDespesasView" customModule="LearningTask_5_2" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="33.5" width="366" height="381"/>
+                                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="khV-xy-RUu" userLabel="Totais Stack View">
+                                                <rect key="frame" x="0.0" y="426.5" width="366" height="21.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Total:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pip-I6-Bks" userLabel="Total Label">
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="21.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 100,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4Q-LH-AgA" userLabel="Valor Total Label">
+                                                        <rect key="frame" x="284" y="0.0" width="82" height="21.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MnL-GQ-Ij3">
-                                        <rect key="frame" x="24" y="746" width="366" height="48"/>
+                                        <rect key="frame" x="24" y="742" width="366" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="QU3-Ml-HML"/>
                                         </constraints>
@@ -58,6 +165,9 @@
                                             <color key="baseForegroundColor" name="Iron"/>
                                             <color key="baseBackgroundColor" name="Downriver"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="botaoRegistrarDespesaPressionado:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cz2-Rm-KEE"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="24" bottom="24" trailing="24"/>
@@ -72,6 +182,14 @@
                             <constraint firstItem="Mbq-U2-pmi" firstAttribute="bottom" secondItem="toW-lW-9em" secondAttribute="bottom" id="iqT-lo-NYs"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="listaDeDespesasView" destination="Dpq-4C-7Bm" id="uc8-ph-c1Y"/>
+                        <outlet property="registrarButton" destination="MnL-GQ-Ij3" id="ZVv-4d-xKx"/>
+                        <outlet property="tipoTextField" destination="xxs-7C-HkB" id="Jx7-CL-cWV"/>
+                        <outlet property="tituloTextField" destination="pmx-Kg-u4u" id="cTT-T5-bSg"/>
+                        <outlet property="valorTextField" destination="FUd-zU-nTo" id="4XG-Ai-1AG"/>
+                        <outlet property="valorTotalLabel" destination="L4Q-LH-AgA" id="WHY-D8-JLL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -80,14 +198,18 @@
     </scenes>
     <resources>
         <image name="Logo" width="1000" height="1565"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <namedColor name="Downriver">
             <color red="0.074509803921568626" green="0.27058823529411763" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Iron">
             <color red="0.90200001001358032" green="0.90600001811981201" blue="0.9100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0324CE192909DAAA00337421 /* RelatorioDeDespesasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0324CE182909DAAA00337421 /* RelatorioDeDespesasViewController.swift */; };
 		58DD48B927E0A21D004912C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DD48B827E0A21D004912C7 /* AppDelegate.swift */; };
 		58DD48BB27E0A21D004912C7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DD48BA27E0A21D004912C7 /* SceneDelegate.swift */; };
-		58DD48BD27E0A21D004912C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DD48BC27E0A21D004912C7 /* ViewController.swift */; };
 		58DD48C027E0A21D004912C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58DD48BE27E0A21D004912C7 /* Main.storyboard */; };
 		58DD48C227E0A21F004912C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58DD48C127E0A21F004912C7 /* Assets.xcassets */; };
 		58DD48C527E0A21F004912C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58DD48C327E0A21F004912C7 /* LaunchScreen.storyboard */; };
@@ -20,10 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0324CE182909DAAA00337421 /* RelatorioDeDespesasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatorioDeDespesasViewController.swift; sourceTree = "<group>"; };
 		58DD48B527E0A21D004912C7 /* LearningTask-5.2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LearningTask-5.2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		58DD48B827E0A21D004912C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58DD48BA27E0A21D004912C7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		58DD48BC27E0A21D004912C7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		58DD48BF27E0A21D004912C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		58DD48C127E0A21F004912C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58DD48C427E0A21F004912C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -45,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0324CE172909D9C800337421 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				0324CE182909DAAA00337421 /* RelatorioDeDespesasViewController.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 		58DD48AC27E0A21D004912C7 = {
 			isa = PBXGroup;
 			children = (
@@ -66,10 +74,10 @@
 			children = (
 				58DD48D127E0A4E3004912C7 /* Supportive Files */,
 				58DD48C127E0A21F004912C7 /* Assets.xcassets */,
-				58DD48BC27E0A21D004912C7 /* ViewController.swift */,
 				58DD48CC27E0A411004912C7 /* Commons */,
 				58DD48D527E0A69D004912C7 /* Models */,
 				58DD48CF27E0A4BF004912C7 /* View */,
+				0324CE172909D9C800337421 /* Scenes */,
 			);
 			path = "LearningTask-5.2";
 			sourceTree = "<group>";
@@ -191,12 +199,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				58DD48D727E0A6B5004912C7 /* RelatorioDeDespesas.swift in Sources */,
-				58DD48BD27E0A21D004912C7 /* ViewController.swift in Sources */,
 				58DD48B927E0A21D004912C7 /* AppDelegate.swift in Sources */,
 				58E7353227E4C829003952B7 /* Converter.swift in Sources */,
 				58DD48D427E0A529004912C7 /* ListaDeDespesasView.swift in Sources */,
 				58DD48CE27E0A427004912C7 /* Formatter.swift in Sources */,
 				58DD48BB27E0A21D004912C7 /* SceneDelegate.swift in Sources */,
+				0324CE192909DAAA00337421 /* RelatorioDeDespesasViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
