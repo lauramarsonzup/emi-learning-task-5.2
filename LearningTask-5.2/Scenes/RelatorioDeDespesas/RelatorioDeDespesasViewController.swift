@@ -20,19 +20,12 @@ class RelatorioDeDespesasViewController: UIViewController {
     
     @IBOutlet weak var registrarButton: UIButton!
     
-    var relatorioDeDespesas: RelatorioDeDespesas? {
-        didSet {
-            guard isViewLoaded, let relatorioDeDespesas = relatorioDeDespesas else { return }
-            atualizaViews(para: relatorioDeDespesas)
-        }
-    }
+    var viewModel: RelatorioDeDespesasViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        if let relatorioDeDespesas = relatorioDeDespesas {
-            atualizaViews(para: relatorioDeDespesas)
-        }
+        
+        viewModel.delegate = self
     }
     
     func exibeAlerta(para mensagemDeErro: MensagemDeErro?) {
@@ -47,22 +40,7 @@ class RelatorioDeDespesasViewController: UIViewController {
     }
     
     func formularioEhValido() -> (Bool, MensagemDeErro?) {
-        if let titulo = tituloTextField.text, titulo.isEmpty {
-            return (false, "Título inválido")
-        }
-        
-        guard let tipoComoTexto = tipoTextField.text,
-              let tipo = Int(tipoComoTexto),
-              let _ = Despesa.Tipo(rawValue: tipo) else {
-            return (false, "Tipo de despesa inválido")
-        }
-        
-        guard let valorEmTexto = valorTextField.text,
-              let _ = Converter.paraDecimal(string: valorEmTexto) else {
-            return (false, "Valor inválido")
-        }
-        
-        return (true, nil)
+        return viewModel.verificarTipoDeDespesaValido(titulo: tituloTextField.text, tipo: tipoTextField.text, valor: valorTextField.text)
     }
 
     @IBAction func botaoAdicionarDespesaPressionado(_ sender: UIButton) {
@@ -78,13 +56,9 @@ class RelatorioDeDespesasViewController: UIViewController {
     
     func adicionaDespesa() {
         let codigo = Int(tipoTextField.text!)!
-        let tipo = Despesa.Tipo(rawValue: codigo)!
+        let valor = Converter.paraDecimal(string: valorTextField.text!)!
         
-        let despesa = Despesa(titulo: tituloTextField.text!,
-                              tipo: tipo,
-                              valor: Converter.paraDecimal(string: valorTextField.text!)!)
-        
-        relatorioDeDespesas?.adiciona(despesa)
+        viewModel.adicionaDespesa(titulo: tituloTextField.text!, codigo: codigo, valor: valor)
     }
     
     func atualizaViews(para relatorio: RelatorioDeDespesas) {
@@ -96,6 +70,13 @@ class RelatorioDeDespesasViewController: UIViewController {
     
     @IBAction func botaoRegistrarDespesaPressionado(_ sender: UIButton) {
         
+    }
+    
+}
+
+extension RelatorioDeDespesasViewController: RelatorioDeDespesasViewModelDelegate {
+    func relatorioDeDespesasViewModelDelegate(_ viewModel: RelatorioDeDespesasViewModel, didLoadRelatorio relatorioDeDespesas: RelatorioDeDespesas) {
+        atualizaViews(para: relatorioDeDespesas)
     }
     
 }

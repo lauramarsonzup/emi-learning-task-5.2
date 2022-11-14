@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0324CE192909DAAA00337421 /* RelatorioDeDespesasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0324CE182909DAAA00337421 /* RelatorioDeDespesasViewController.swift */; };
+		0387A2EF2922BC1300E4848F /* RelatorioDeDespesasViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0387A2EE2922BC1300E4848F /* RelatorioDeDespesasViewModel.swift */; };
 		58DD48B927E0A21D004912C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DD48B827E0A21D004912C7 /* AppDelegate.swift */; };
 		58DD48BB27E0A21D004912C7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DD48BA27E0A21D004912C7 /* SceneDelegate.swift */; };
 		58DD48C027E0A21D004912C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58DD48BE27E0A21D004912C7 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		0324CE182909DAAA00337421 /* RelatorioDeDespesasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatorioDeDespesasViewController.swift; sourceTree = "<group>"; };
+		0387A2EE2922BC1300E4848F /* RelatorioDeDespesasViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatorioDeDespesasViewModel.swift; sourceTree = "<group>"; };
 		58DD48B527E0A21D004912C7 /* LearningTask-5.2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LearningTask-5.2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		58DD48B827E0A21D004912C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58DD48BA27E0A21D004912C7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,9 +50,26 @@
 		0324CE172909D9C800337421 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				0324CE182909DAAA00337421 /* RelatorioDeDespesasViewController.swift */,
+				0387A2ED2922BBD800E4848F /* RelatorioDeDespesas */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		0387A2EC2922BBCA00E4848F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0387A2EE2922BC1300E4848F /* RelatorioDeDespesasViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0387A2ED2922BBD800E4848F /* RelatorioDeDespesas */ = {
+			isa = PBXGroup;
+			children = (
+				0324CE182909DAAA00337421 /* RelatorioDeDespesasViewController.swift */,
+				0387A2EC2922BBCA00E4848F /* ViewModel */,
+			);
+			path = RelatorioDeDespesas;
 			sourceTree = "<group>";
 		};
 		58DD48AC27E0A21D004912C7 = {
@@ -205,6 +224,7 @@
 				58DD48CE27E0A427004912C7 /* Formatter.swift in Sources */,
 				58DD48BB27E0A21D004912C7 /* SceneDelegate.swift in Sources */,
 				0324CE192909DAAA00337421 /* RelatorioDeDespesasViewController.swift in Sources */,
+				0387A2EF2922BC1300E4848F /* RelatorioDeDespesasViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

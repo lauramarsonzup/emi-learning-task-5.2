@@ -20,8 +20,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let relatorio = RelatorioDeDespesas()
         
+        let viewModel = RelatorioDeDespesasViewModel(relatorio: relatorio)
+        
         let relatorioViewController = window!.rootViewController as! RelatorioDeDespesasViewController
-        relatorioViewController.relatorioDeDespesas = relatorio
+        relatorioViewController.viewModel = viewModel
+//        relatorioViewController.relatorioDeDespesas = relatorio
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
